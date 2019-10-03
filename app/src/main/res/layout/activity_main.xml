@@ -22,4 +22,67 @@
         android:padding="10dp"
         android:text="建表"
         android:textColor="@color/blue" />
+
+    <Button
+        android:id="@+id/addSqBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:text="Add Data"
+        android:textAllCaps="false"
+        android:textColor="@color/blue"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/updateSqBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:text="Update Data"
+        android:textAllCaps="false"
+        android:textColor="@color/blue"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/inquireSqBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:text="Inquire Data"
+        android:textAllCaps="false"
+        android:textColor="@color/blue"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/daleteSqBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:text="Delete Data"
+        android:textAllCaps="false"
+        android:textColor="@color/blue"
+        android:textSize="20sp" />
+
+
+    <Button
+        android:id="@+id/litepalBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:text="LitePal"
+        android:textAllCaps="false"
+        android:textColor="@color/blue"
+        android:textSize="20sp" />
+
+
 </LinearLayout>

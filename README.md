@@ -53,4 +53,22 @@ step:
             A:of Course 继承 SQLiteOpenHelper 会给我们提供一个onCreate 和 onUpgrade方法
             接着-> 我们在 onUpgrade 方法中使用 drop 语句删除掉之前新建的表，并且执行建表语句
             这样，每次版本发生改变的话，就会删除掉原来的Sqlite 表，重新新建！也就是现在 版本更新后更新 表的功能！
+            
+            Q：add data 数据之后 cmd命令打开没有查出表信息,为什么
+            A：表名一定要匹配,传递的值得类型也需要匹配！不然 查表什么都查不到，就是空白的！
+            
+            
+       ----------------------------更新 2019年10月3日16点25分
+        Q：如何使用LietPal进行查库操作？
+        A:1.导入依赖 -> 添加application-> 添加 access文件 之后 CRUD实验就可以了
+        
+        Q：那它到底有什么用呢？他相对比 OutPutStream + SharePreferences + Sqlite 有哪些用处呢？
+        A：其实不难理解，从以前的 电报到现在的计算机，都在发展，所以，技术是不断地发展 突破的，这同时也是 Android数据库的优化 框架！ 就好比 莫尔斯码，到布莱叶盲文！再到c , c++ ,java ,python等等
+         
+        Q:如何使用 LitePal 给数据库添加 数据？
+        A：实体类 继承 LitePalSupport -> 接着给对象赋值->使用 LitePalSupport 里面的 save()方法保存最后的数据-> 使用 select * from Book; 去查询
        
+       Q：如何使用LitePal 更新数据呢？
+       A：LitePal 提供了两种更新数据的方式，一种是对已存储的对象进行更新！一种是使用update去更新！
+       
+      
