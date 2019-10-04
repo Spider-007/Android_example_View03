@@ -1,14 +1,14 @@
-#android数据存储
+#Android数据存储
     step: 
     android 有三种基本的存储方式 
-##其一 使用 InputStream 和 outPutStream 来读取和写入文件 已达到保存效果
+##O:其一 使用 InputStream 和 outPutStream 来读取和写入文件 已达到保存效果
     Q：如何在用户退出登陆后，重新打开app还是该数据？ <br/>
     1.修改布局文件，添加editText框 来进行测试 <br/>
     2.重写onDestroy方法，退出app时保存 当前的editText内容 <br/>
     3.使用outPutStream写入文件！(java流操作) <br/>
     4.使用FileInputStream 读取文件，一行一行读取 返回读取后的字符串 <br/>
     5.读取完毕在onCreate中添加判断条件 查看是否读取完毕->接着重启app显示读取内容 <br/>
-##其二：使用SharePreferences 它是使用键值对存储数据的，以下统称为Sp
+##T:其二：使用SharePreferences 它是使用键值对存储数据的，以下统称为Sp
 ###1.首先需要获取到Sp对象,Android主要提供了三种获取方式 <br/>
        -> one: 使用 Context类中的getSharePreferences() 方法 <br/>
        此方法接受两个参数，第一个参数 用于指定 SharePreferences 的文件名，如果不存在则重新创建一个 <br/>
@@ -20,7 +20,7 @@
        1.调用Sp的edit() 方法 获取Sp.edit()对象 <br/>
        2.使用 putBoolean,putString 等方法传值 <br/>
        3.使用apply方法将添加的数据进行提交，从而完成数据存储操作！ <br/>
-##其三：使用 android 内置的sqlite 来执行CRUD，一般应对 复杂的数据 比如不用门户 的不同联系人 
+##T:其三：使用 android 内置的sqlite 来执行CRUD，一般应对 复杂的数据 比如不用门户 的不同联系人 
         1. 创建 Sqlite类，写建表语句 <br/>
         2. 创建点击按钮，点击 建表，并弹出 建表成功提示，后期可以维护更改 <br/>
         3. 使用adb shell 去查询表信息！cd到手机设备database目录->键入Sqlite3+表名即可查询出来表 <br/> 
