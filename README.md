@@ -57,3 +57,18 @@ Q：如何在用户退出登陆后，重新打开app还是该数据？ <br/>
         A：LitePal 提供了两种更新数据的方式，一种是对已存储的对象进行更新！一种是使用update去更新！ <br/>
        
       
+ ## 更新 替换建表成功 为 --> ContentProvider 的跨进程共享数据 
+     Q:这么做的好处是什么？<br/>
+     A：可以让所有的App都共享该数据库表的数据，也就是说在其他app，查询指定URI就可以获取到这个库的所有数据！<br/>
+     <br/>
+     <b>step:</b><br/>
+        1.去除MySqilte里面的Toast吐司，因为太low!<br/>
+        2.创建一个 ContentProvider 使用android 提供的new -> other -> Content Provider <br/>
+        3.首先 定义四个常量 分别是 BOOK_DIR,BOOK_ITEM,CATEGORY_DIR,CATEGORY_ITEM,用来判断表所匹配的uri!<br/>
+        4.接着创建 static 代码块，用来添加 对应的内容提供者的uri;<br/>
+        5.在OnCreate里面 使用 自定义的 MySqlite 创建和升级表，并且返回true 代表创建成功！<br/>
+        6.接着 使用 我们定义的四个常量判断表的 uri，从而进行 CRUD 操作！<br/>
+        7.接着使用getType()返回 MIME 类型的字符串 格式如下 ：如果通配符为/* -> vnd.android.cursor.dir/vnd.android.content.provider.table1<br/>
+        8.在 AndroidManifest.xml 里面对ContentProvider进行注册，使用<privider></provider> 创建 ContentProvider<br/>
+        9.创建新的项目，布局里面定义四个按钮,分别是 CRUD 可以用 Multiplexing litePal 的布局<br/>
+       
