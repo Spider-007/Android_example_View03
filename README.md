@@ -71,4 +71,8 @@ Q：如何在用户退出登陆后，重新打开app还是该数据？ <br/>
         7.接着使用getType()返回 MIME 类型的字符串 格式如下 ：如果通配符为/* -> vnd.android.cursor.dir/vnd.android.content.provider.table1<br/>
         8.在 AndroidManifest.xml 里面对ContentProvider进行注册，使用<privider></provider> 创建 ContentProvider<br/>
         9.创建新的项目，布局里面定义四个按钮,分别是 CRUD 可以用 Multiplexing litePal 的布局<br/>
-       
+      <br/> Q：android 命名 databasetest 为包名可以自己创建数据库 db db2 db3文件么？
+      <br/> A：不可以的，我想多了！！
+### note
+      <br/>case  的 break ;可以结束当前类型，一定要注意细节，还有一个问题来了失去面对他，解决它！收获颇多呀！
+          

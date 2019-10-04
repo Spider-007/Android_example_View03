@@ -3,7 +3,6 @@ package com.example.android_example_view03;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -31,7 +30,6 @@ public class MySqlite extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(BOOK_TABLE);
         db.execSQL(TABLE_CATEGORY);
-        Toast.makeText(mContext, "create BOOK_TABLE Success", Toast.LENGTH_SHORT).show();
     }
 
     @Override
